@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <script type="application/javascript">
+                function checkdata()
+            {
+               //codigo para checar se o texto é valido e para mandar mensagem de erro para o usuário     
+            var username = document.getElementById("name");
+            var emailid = document.getElementById("email")
+                // se o campo está vazio 
+                if(username.value ==""){
+                   alert("Please enter the name");
+                   username.focus();    
+                   return false; 
+                }
+                //checar se o email está vazio 
+                if(emailid.value ==""){
+                   alert("Please enter email");
+                   emailid.focus();
+                   return false;
+                }
+                // se tudo esta ok 
+                return true;
+
+            }    
+    </script>
+    <title>Contact Details</title>
+    </head>
+    <body>
+        <h2>Enter your contact Details:</h2> <br>
+        <form id="form1" onsubmit= "return checkdata()">
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <br>
+            <label for="email">E-mail ID :</label>
+            <input type="text" id="email" name="email">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </form>
+</html>
